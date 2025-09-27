@@ -9,9 +9,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Components/Footer';
 
-//fetch
+// fetch tickets with correct base URL for GitHub Pages
 const fetchTicket = async () => {
-  const res = await fetch('/tickets.json');
+  const res = await fetch(import.meta.env.BASE_URL + 'tickets.json');
   return res.json();
 };
 
